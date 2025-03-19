@@ -1,40 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Challenge Ingreso a Academia ForIT 2025
 
-## Getting Started
+## Objetivo  
+Crear una aplicación básica de lista de tareas que demuestre conocimientos fundamentales de Git, JavaScript, Node.js y React.
 
-First, run the development server:
+## Requisitos  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Crear un repositorio público en GitHub (o similar) para el proyecto  
+  - Crear una carpeta para el backend  
+  - Crear otra carpeta para el frontend  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Crear un servidor básico con Express  
+- Implementar los siguientes endpoints:  
+  - `GET /api/tasks` - Obtener todas las tareas  
+  - `POST /api/tasks` - Crear una nueva tarea  
+  - `PUT /api/tasks/:id` - Actualizar una tarea existente  
+  - `DELETE /api/tasks/:id` - Eliminar una tarea  
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Usar un array en memoria como almacenamiento temporal  
+- Implementar manejo básico de errores  
+- Crear una aplicación de React con Vite (o similar)  
+- Implementar los siguientes componentes/páginas (usando algún router):  
+  - **TaskList** - Muestra la lista de tareas  
+  - **TaskItem** - Muestra una tarea individual  
+  - **TaskForm** - Formulario para crear/editar tareas  
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Implementar llamadas a la API de Express usando `fetch`  
+- Configurar variables de entorno tanto para la API como el frontend  
+- Usar CSS básico para darle estilo a la aplicación  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Criterios de Evaluación  
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No es necesario que esté perfecto, pero debe funcionar adecuadamente y demostrar conocimientos básicos de las tecnologías descritas.  
 
-## Learn More
+Se tendrá en cuenta:  
+- Que la funcionalidad básica esté completa (crear, leer, actualizar y eliminar tareas).  
+- Uso de la configuración recomendada de **ESLint** para evaluar el código.  
+- Uso correcto de Git en un entorno Node.js.  
+- Manejo adecuado del estado en React mediante **hooks**.  
+- Implementación correcta de la API en Node.js.  
+- **No usar ChatGPT u otras IA** para la creación total del código. Se busca demostrar conocimientos propios.  
 
-To learn more about Next.js, take a look at the following resources:
+## Bonus (Opcionales)  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+Puedes agregar cualquier otra característica que desees. Algunas ideas:  
+- Usar **Next.js** en lugar de React y Express.  
+- Implementar filtros para mostrar tareas completadas/pendientes.  
+- Validación de formularios.  
+- Persistencia con **sqlite3**.  
+- Funcionalidad de búsqueda.  
+- Usar **TypeScript** en lugar de JavaScript.  
+- Utilizar **Tailwind, Bootstrap o SASS** para los estilos.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Entrega  
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- **Tienes una semana** desde la recepción del challenge para entregar.  
+- Incluir instrucciones para ejecutar la aplicación localmente en el `README.md`.  
+- Incluir **screenshots** de la aplicación funcionando en el `README.md`.  

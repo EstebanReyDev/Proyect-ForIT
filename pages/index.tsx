@@ -37,7 +37,7 @@ export default function TodoList() {
       return;
     }
 
-    const response = await fetch(`${baseUrl}/${taskId}`, {
+    const response = await fetch(`/api/${taskId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -53,8 +53,31 @@ export default function TodoList() {
     );
   };
 
+  const updateTask = async (taskId: number, newTaskText: string) => {
+    const taskToUpdate = tasks.find((task) => task.id === taskId);
+    if (!taskToUpdate) {
+      return;
+    }
+
+    const response = await fetch(`/api/${taskId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...taskToUpdate,
+        taskText: newTaskText,
+      }),
+    });
+    const updatedTask = await response.json();
+    setTasks(
+      tasks.map((task) => (task.id === taskId ? updatedTask : task))
+    );
+  };
+
+
   const removeTask = async (taskId: number) => {
-    await fetch(`${baseUrl}/${taskId}`, {
+    await fetch(`/api/${taskId}`, {
       method: "DELETE",
     });
     setTasks(tasks.filter((task) => task.id !== taskId));
@@ -72,6 +95,7 @@ export default function TodoList() {
             tasks={tasks}
             toggleTaskCompletion={toggleTaskCompletion}
             removeTask={removeTask}
+            updateTask={updateTask}
           />
         </div>
       </div>

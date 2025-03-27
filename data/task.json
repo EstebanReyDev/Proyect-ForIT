@@ -1,22 +1,22 @@
 [
   {
-    "id": 1,
-    "taskText": "comer",
-    "completed": false
-  },
-  {
     "id": 2,
-    "taskText": "jugar",
+    "taskText": "bailar caca",
     "completed": false
   },
   {
     "id": 3,
-    "taskText": "bailar",
+    "taskText": "bailar otra vez ",
     "completed": false
   },
   {
     "id": 4,
-    "taskText": "Jugar",
+    "taskText": "comer pizza",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "taskText": "comer arroz con tuco",
     "completed": false
   }
 ]

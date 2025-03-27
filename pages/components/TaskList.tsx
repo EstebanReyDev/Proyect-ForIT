@@ -11,12 +11,14 @@ interface TaskListProps {
   tasks: Task[];
   toggleTaskCompletion: (id: number) => void;
   removeTask: (id: number) => void;
+  updateTask: (id: number, newTaskText: string) => void;
 }
 
 const TaskList: React.FC<TaskListProps> = ({
   tasks,
   toggleTaskCompletion,
   removeTask,
+  updateTask,
 }) => {
   return (
     <ul className="w-full text-black">
@@ -28,6 +30,7 @@ const TaskList: React.FC<TaskListProps> = ({
           completed={task.completed}
           toggleTaskCompletion={toggleTaskCompletion}
           removeTask={removeTask}
+          updateTask={updateTask}
         />
       ))}
     </ul>

@@ -85,13 +85,13 @@ export default function TodoList() {
 
   return (
     <BackgroundLines className="min-h-screen flex items-center justify-center bg-gray-100 relative">
-      <div className="container mx-auto max-w-md mt-10 p-6 bg-white shadow-lg rounded-lg relative z-10">
-        <h1 className="text-2xl font-bold mb-4 text-black">Lista de Tareas</h1>
+      <div className="container mx-auto w-full max-w-2xl mt-10 p-10 bg-white shadow-lg rounded-lg relative z-10">
+        <h1 className="text-2xl font-bold mb-4 text-black text-center">Lista de Tareas</h1>
         <div className="text-black">
-          <TaskForm addTask={addTask} />
+          <TaskForm addTask={addTask} className="gap-4" />
         </div>
         <div className="text-black">
-          <TaskList
+         <TaskList
             tasks={tasks}
             toggleTaskCompletion={toggleTaskCompletion}
             removeTask={removeTask}

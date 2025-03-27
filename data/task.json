@@ -1,22 +1,7 @@
 [
   {
-    "id": 2,
-    "taskText": "bailar caca",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "taskText": "bailar otra vez ",
-    "completed": false
-  },
-  {
-    "id": 4,
-    "taskText": "comer pizza",
-    "completed": false
-  },
-  {
-    "id": 5,
-    "taskText": "comer arroz con tuco",
+    "id": 1,
+    "taskText": "Jugar ",
     "completed": false
   }
 ]

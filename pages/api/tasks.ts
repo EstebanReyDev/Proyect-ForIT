@@ -6,7 +6,7 @@ const dataFilePath = path.join(process.cwd(), 'data/task.json');
 
 interface Task {
     id: number;
-    title: string;
+    taskText: string;
     completed: boolean;
 }
 
@@ -39,10 +39,10 @@ export default async function handler(
         }
     } else if (req.method === 'POST') {
         try {
-            const { title } = req.body;
+            const { taskText } = req.body;
             const tasks = await readTasks();
             const newId = tasks.length > 0 ? Math.max(...tasks.map((t) => t.id)) + 1 : 1;
-            const newTask: Task = { id: newId, title, completed: false };
+            const newTask: Task = { id: newId, taskText, completed: false };
             tasks.push(newTask);
             await writeTasks(tasks);
             res.status(201).json(newTask);
@@ -52,14 +52,14 @@ export default async function handler(
     } else if (req.method === 'PUT') {
         try {
             const { id } = req.query;
-            const { title, completed } = req.body;
+            const { taskText, completed } = req.body;
             const tasks = await readTasks();
             const taskIndex = tasks.findIndex((task) => task.id === Number(id));
             if (taskIndex === -1) {
                 res.status(404).json({ error: 'Tarea no encontrada.' });
             } else {
-                tasks[taskIndex] = { ...tasks[taskIndex], title, completed };
                 await writeTasks(tasks);
+                tasks[taskIndex] = { ...tasks[taskIndex], taskText, completed };
                 res.status(200).json(tasks[taskIndex]);
             }
         } catch (error) {

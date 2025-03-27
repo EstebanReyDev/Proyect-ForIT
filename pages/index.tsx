@@ -5,7 +5,7 @@ import TaskForm from "./components/TaskForm";
 
 interface Task {
   id: number;
-  text: string;
+  taskText: string;
   completed: boolean;
 }
 const baseUrl = "/api/tasks";
@@ -25,7 +25,7 @@ export default function TodoList() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ text, completed: false }),
+      body: JSON.stringify({ taskText: text, completed: false }),
     });
     const newTask = await response.json();
     setTasks([...tasks, newTask]);
@@ -33,7 +33,9 @@ export default function TodoList() {
 
   const toggleTaskCompletion = async (taskId: number) => {
     const taskToUpdate = tasks.find((task) => task.id === taskId);
-    if (!taskToUpdate) return;
+    if (!taskToUpdate) {
+      return;
+    }
 
     const response = await fetch(`${baseUrl}/${taskId}`, {
       method: "PUT",

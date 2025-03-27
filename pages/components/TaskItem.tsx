@@ -2,7 +2,7 @@ import React from 'react';
 
 interface TaskItemProps {
   id: number;
-  text: string;
+  taskText: string;
   completed: boolean;
   toggleTaskCompletion: (id: number) => void;
   removeTask: (id: number) => void;
@@ -10,7 +10,7 @@ interface TaskItemProps {
 
 const TaskItem: React.FC<TaskItemProps> = ({
   id,
-  text,
+  taskText,
   completed,
   toggleTaskCompletion,
   removeTask,
@@ -23,7 +23,7 @@ const TaskItem: React.FC<TaskItemProps> = ({
           completed ? 'line-through text-gray-500' : ''
         }`}
       >
-        {text}
+        {taskText}
       </span>
       <button
         onClick={() => removeTask(id)}

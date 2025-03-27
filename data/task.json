@@ -1,26 +1,22 @@
 [
   {
     "id": 1,
+    "taskText": "comer",
     "completed": false
   },
   {
     "id": 2,
+    "taskText": "jugar",
     "completed": false
   },
   {
     "id": 3,
+    "taskText": "bailar",
     "completed": false
   },
   {
     "id": 4,
-    "completed": false
-  },
-  {
-    "id": 5,
-    "completed": false
-  },
-  {
-    "id": 6,
+    "taskText": "Jugar",
     "completed": false
   }
 ]

@@ -2,9 +2,9 @@ import React from 'react';
 import TaskItem from './TaskItem';
 
 interface Task {
-  id: number;
-  text: string;
-  completed: boolean;
+    id: number;
+    taskText: string;
+    completed: boolean;
 }
 
 interface TaskListProps {
@@ -24,7 +24,7 @@ const TaskList: React.FC<TaskListProps> = ({
         <TaskItem
           key={task.id}
           id={task.id}
-          text={task.text}
+          taskText={task.taskText}
           completed={task.completed}
           toggleTaskCompletion={toggleTaskCompletion}
           removeTask={removeTask}

@@ -88,7 +88,7 @@ export default function TodoList() {
       <div className="container mx-auto w-full max-w-2xl mt-10 p-10 bg-white shadow-lg rounded-lg relative z-10">
         <h1 className="text-2xl font-bold mb-4 text-black text-center">Lista de Tareas</h1>
         <div className="text-black">
-          <TaskForm addTask={addTask} className="gap-4" />
+          <TaskForm addTask={addTask}  />
         </div>
         <div className="text-black">
          <TaskList
